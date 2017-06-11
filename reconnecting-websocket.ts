@@ -137,7 +137,7 @@ class ReconnectingWebSocket {
             this.log('ReconnectingWebSocket', 'onmessage', this.url, event.data);
             this.onmessage(event);
         };
-        this.ws.onerror = (event) => {
+        this.ws.onerror = (event:ErrorEvent) => {
             this.log('ReconnectingWebSocket', 'onerror', this.url, event);
             this.onerror(event);
         };
